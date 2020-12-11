@@ -1,6 +1,10 @@
+import PictureList from "./components/PictureList"
+
 function App() {
   return (
-    <h1>Hello from App</h1>
+    <div id="app-element">
+      <PictureList />
+    </div>
   );
 }
 
