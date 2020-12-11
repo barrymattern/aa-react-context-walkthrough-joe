@@ -1,12 +1,13 @@
 import Picture from './Picture'
 
-const PictureList = () => {
+// Expect to receive a prop call "imgUrls"
+// which will be an array of strings that should be URLs
+const PictureList = ({ imgUrls }) => {
   return (
     <ul>
-      <li><Picture imgUrl={"https://cdn1.mecum.com/auctions/fl0117/fl0117-275088/images/fl0117-275088_1@2x.jpg?1481909731000"} /></li>
-      <li><Picture imgUrl={"https://cdn1.mecum.com/auctions/fl0117/fl0117-275088/images/fl0117-275088_2@2x.jpg?1481909731000"} /></li>
-      <li><Picture imgUrl={"https://cdn1.mecum.com/auctions/fl0117/fl0117-275088/images/fl0117-275088_8@2x.jpg?1481909731000"} /></li>
-      <li><Picture imgUrl={"https://cdn1.mecum.com/auctions/fl0117/fl0117-275088/images/fl0117-275088_3@2x.jpg?1481909731000"} /></li>
+      {imgUrls.map((imageUrl, i) => {
+        return <li key={i}><Picture imgUrl={imageUrl} /></li>
+      })}
     </ul>
   );
 };
