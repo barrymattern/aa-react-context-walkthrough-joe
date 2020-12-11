@@ -13,7 +13,7 @@ function App() {
 /* Wrap a bunch of components in a Provider Component */
 /* The "value" prop is the value that is shared with all nested component within */
   return (
-    <CarImagesContext.Provider value={{ carUrls: carImages }}>
+    <CarImagesContext.Provider value={{ carUrls: carImages, setCarImages }}>
       <div id="app-element">
         <NiceBox />
       </div>
